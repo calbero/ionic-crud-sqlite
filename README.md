@@ -6,6 +6,11 @@ Lets you add, update and delete users.
 
 ![Example](sqlite.png)
 
+![Example](sqlite2.png)
+
+![Example](sqlite3.png)
+
+
 ionic sqlite plugin
 ```bash
 $ ionic cordova plugin add cordova-sqlite-storage

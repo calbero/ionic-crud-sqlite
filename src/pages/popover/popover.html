@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{getHeader()}} USER
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form #loginForm="ngForm" (ngSubmit)="clickSubmit()" autocomplete="off">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input placeholder="Name" name="username" id="nameField" type="text" required [(ngModel)]="user.name" #name></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Email" name="email" id="emailField" type="text" required [(ngModel)]="user.email"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">SUBMIT</button>
+        <div *ngIf="error">{{error}}</div>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>
